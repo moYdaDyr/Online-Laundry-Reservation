@@ -1,0 +1,39 @@
+﻿<Window x:Class="Kursovaya2.AttendantNewRequestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursovaya2"
+        mc:Ignorable="d"
+        Title="{DynamicResource m_newReqWindow}" Height="450" Width="800" SizeToContent="WidthAndHeight">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="AttendantRequestSelectorLabel" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource CommonLabelStyle}" Text="{DynamicResource m_AttendantRequestSelectorLabel}"/>
+        <TextBlock Name="AttendantRequestTextLebel" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource CommonLabelStyle}" Text="{DynamicResource m_AttendantRequestTextLebel}"/>
+        <TextBlock Name="AttendantRequestTextTip" Grid.Row="3" Grid.Column="2" Style="{StaticResource CommonTipStyle}" Text="{DynamicResource m_AttendantRequestTextTip}"/>
+        <TextBlock Name="AttendantRequestThemeTip" Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" Style="{StaticResource CommonLabelStyle}"/>
+        <TextBlock Name="AttendantRequestWriteHere" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource CommonLabelStyle}" Text="{DynamicResource m_AttendantRequestTextLebel}"/>
+
+        <Button Name="AttendantSaveRequestButton" Grid.Row="4" Grid.Column="2" Click="AttendantSaveRequestButton_Click" Style="{StaticResource CommonButtonsStyle}" Content="{DynamicResource m_AttendantSaveRequestButton}"/>
+        <Button Name="AttendantCancelButton" Grid.Row="4" Grid.Column="0" Click="AttendantCancelButton_Click" Style="{StaticResource CommonButtonsStyle}" Content="{DynamicResource m_Cancel}"/>
+
+        <ComboBox Name="AttendantRequestsThemeSelector" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" SelectionChanged="AttendantRequestsThemeSelector_SelectionChanged" Style="{StaticResource CommonSelectorStyle}"/>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+            <TextBox Name ="AttendantRequestText" TextChanged="AttendantRequestText_TextChanged"/>
+        </ScrollViewer>
+    </Grid>
+</Window>

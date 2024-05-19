@@ -1,0 +1,54 @@
+﻿<Page x:Class="Kursovaya2.AdministratorRedactingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kursovaya2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdministratorRedactingPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="AdministratorRedactingTipLabel" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="{DynamicResource m_AdministratorRedactingTipLabel}" Style="{StaticResource CommonTipStyle}"/>
+        <TextBlock Name="AdministratorRedactingLabel" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Text="{DynamicResource m_AdministratorRedactingLabel}" Style="{StaticResource CenterLabelStyle}"/>
+
+        <Button Name="AdministratorSaveDataButton" Grid.Column="0" Grid.Row="3" Click="AdministratorSaveDataButton_Click" Style="{StaticResource CommonButtonsStyle}" Content="{DynamicResource m_SaveData}"/>
+        <Button Name="AdministratorAddNewDataButton" Grid.Column="1" Grid.Row="3" Click="AdministratorAddNewDataButton_Click" Style="{StaticResource CommonButtonsStyle}" Content="{DynamicResource m_AdministratorAddNewDataButton}"/>
+
+        <ScrollViewer Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <DataGrid Name ="AdministratorTable" AutoGenerateColumns="False">
+
+                <DataGrid.Columns>
+
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Name ="AdministratorChangePasswordButton"  Click="AdministratorChangePassword_Click" Content="{DynamicResource m_AdministratorChangePasswordButton}"
+                                        CommandParameter="{Binding ID}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Name ="AdministratorDeleteButton"  Click="AdministratorDeleteButton_Click" Content="{DynamicResource m_AdministratorDeleteButton}"
+                                        CommandParameter="{Binding ID}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+    </Grid>
+</Page>

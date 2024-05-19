@@ -1,0 +1,39 @@
+﻿<Page x:Class="Kursovaya2.AttendantRequestPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kursovaya2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AttendantRequestPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="AttendantRequestExistsSelectorLabel" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource CommonLabelStyle}" Text="{DynamicResource m_AttendantRequestExistsSelectorLabel}"/>
+        <TextBlock Name="AttendantRequestTextLebel" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource CommonLabelStyle}" Text="{DynamicResource m_AttendantRequestTextLebel}"/>
+        <TextBlock Name="AttendantRequestTextTip" Grid.Row="3" Grid.Column="2" Style="{StaticResource CommonLabelStyle}" Text="{DynamicResource m_AttendantRequestTextTip}"/>
+
+        <Button Name="AttendantUpdateRequestButton" Grid.Row="4" Grid.Column="2" Click="AttendantUpdateRequestButton_Click" Style="{StaticResource CommonButtonsStyle}" Content="{DynamicResource m_AttendantUpdateRequestButton}"/>
+        <Button Name="AttendantDeleteRequestButton" Grid.Row="4" Grid.Column="0" Click="AttendantDeleteRequestButton_Click" Style="{StaticResource CommonButtonsStyle}" Content="{DynamicResource m_AttendantDeleteRequestButton}"/>
+        <Button Name="AttendantCreateRequestButton" Grid.Row="1" Grid.Column="2" Click="AttendantCreateRequestButton_Click" Style="{StaticResource CommonButtonsStyle}" Content="{DynamicResource m_AttendantCreateRequestButton}"/>
+
+        <ComboBox Name="AttendantRequestsSelector" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" SelectionChanged="AttendantRequestsSelector_SelectionChanged" Style="{StaticResource CommonSelectorStyle}"/>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+            <TextBox Name ="AttendantRequestText" TextChanged="AttendantRequestText_TextChanged"/>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,99 @@
+﻿<Page x:Class="Kursovaya2.AttendantResidentsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kursovaya2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AttendantResidentsPage">
+
+    <Page.Resources>
+        
+            
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="AttendantResidentsTipLabel" Grid.Row="0" Text="{DynamicResource m_AttendantResidentsTip}" Style="{StaticResource CommonTipStyle}"/>
+        <TextBlock Name="AttendantResidentsTableLabel" Grid.Row="1" Text="{DynamicResource m_AttendantResidentsTableLabel}" Style="{StaticResource CommonLabelStyle}"/>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="2">
+            <DataGrid Name ="AttendantResidentsTable" IsReadOnly="True" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path=Building}" HeaderStyle="{StaticResource DataGridFilterHeaderStyle}">
+                        <DataGridTextColumn.Header>
+                            <TextBlock Text="{DynamicResource m_AttendantResidentsBuildingHeader}" Name="AttendantResidentsBuildingHeader"/>
+                        </DataGridTextColumn.Header>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Path=Surname}" HeaderStyle="{StaticResource DataGridFilterHeaderStyle}">
+                        <DataGridTextColumn.Header>
+                            <TextBlock Text="{DynamicResource m_AttendantResidentsNameHeader}"/>
+                        </DataGridTextColumn.Header>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Path=Name}" HeaderStyle="{StaticResource DataGridFilterHeaderStyle}">
+                        <DataGridTextColumn.Header>
+                            <TextBlock Text="{DynamicResource m_AttendantResidentsSurnameHeader}"/>
+                        </DataGridTextColumn.Header>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Path=Patronymic}" HeaderStyle="{StaticResource DataGridFilterHeaderStyle}">
+                        <DataGridTextColumn.Header>
+                            <TextBlock Text="{DynamicResource m_AttendantResidentsPatronymicHeader}"/>
+                        </DataGridTextColumn.Header>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Path=StudentCard}" HeaderStyle="{StaticResource DataGridFilterHeaderStyle}">
+                        <DataGridTextColumn.Header>
+                            <TextBlock Text="{DynamicResource m_AttendantResidentsStudentCardHeader}"/>
+                        </DataGridTextColumn.Header>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Path=Room}" HeaderStyle="{StaticResource DataGridFilterHeaderStyle}">
+                        <DataGridTextColumn.Header>
+                            <TextBlock Text="{DynamicResource m_AttendantResidentsRoomHeader}"/>
+                        </DataGridTextColumn.Header>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Path=StatusText}" HeaderStyle="{StaticResource DataGridFilterHeaderStyle}">
+                        <DataGridTextColumn.Header>
+                            <TextBlock Text="{DynamicResource m_AttendantResidentsStatusHeader}"/>
+                        </DataGridTextColumn.Header>
+                    </DataGridTextColumn>
+
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Name ="AttendantResidentsTableBlockButton"  Click="AttendantResidentsTableStatusButton_Click" Content="{DynamicResource m_attendantResidentsTableBlockButton}"
+                                        CommandParameter="{Binding ID}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Name ="AttendantResidentsTableUnblockButton"  Click="AttendantResidentsTableUnblockButton_Click" Content="{DynamicResource m_attendantResidentsTableUnblockButton}"
+                                        CommandParameter="{Binding ID}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Name ="AttendantResidentsTableReportkButton"  Click="AttendantResidentsTableReportkButton_Click" Content="{DynamicResource m_attendantResidentsTableReportButton}"
+                    CommandParameter="{Binding ID}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+    </Grid>
+
+</Page>

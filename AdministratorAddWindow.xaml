@@ -1,0 +1,29 @@
+﻿<Window x:Class="Kursovaya2.AdministratorAddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursovaya2"
+        mc:Ignorable="d"
+        Title="AdministratorAddWindow" Height="Auto" Width="Auto" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="AdministratorAddWindowLabel" Style="{StaticResource CommonLabelStyle}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="{DynamicResource m_AdministratorAddWindowLabel}"/>
+
+        <Button Name="AdministratorAddCancelButton" Style="{StaticResource CommonButtonsStyle}" Grid.Column="0" Grid.Row="2" Content="{DynamicResource m_Cancel}" Click="AdministratorAddCancelButton_Click"/>
+        <Button Name="AdministratorAddlButton" Style="{StaticResource CommonButtonsStyle}" Grid.Column="1" Grid.Row="2" Content="{DynamicResource m_SaveData}" Click="AdministratorAddlButton_Click"/>
+
+        <DataGrid Name="AdministratorTable" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" AutoGenerateColumns="False">
+            
+        </DataGrid>
+    </Grid>
+</Window>

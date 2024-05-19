@@ -1,0 +1,108 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+    <v:String x:Key="m_mainMenuResident">Войти как проживающий</v:String>
+    <v:String x:Key="m_Title">Система записи в прачечную</v:String>
+    <v:String x:Key="m_mainMenuAttendant">Войти как дежурный</v:String>
+    <v:String x:Key="m_mainMenuSecurity">Войти как охранник</v:String>
+    <v:String x:Key="m_mainMenuAdministrator">Войти как администратор</v:String>
+    <v:String x:Key="m_mainMenuChangeLanguage">Change language to English</v:String>
+    <v:String x:Key="m_mainMenuQuitButton">Выйти</v:String>
+    <v:String x:Key="m_mainMenuGoBackButton">Назад</v:String>
+    <v:String x:Key="m_studentStartGoBook">Записаться в прачечную</v:String>
+    <v:String x:Key="m_studentStartGoDeleteAndRedact">Мои записи</v:String>
+    <v:String x:Key="m_studentStartPersonalName">Имя</v:String>
+    <v:String x:Key="m_studentStartPersonalSurname">Фамилия</v:String>
+    <v:String x:Key="m_studentStartPersonalPatronymic">Отчество</v:String>
+    <v:String x:Key="m_studentStartPersonalBuilding">Общежитие</v:String>
+    <v:String x:Key="m_studentStartPersonalStudentCard">Студенческий билет</v:String>
+    <v:String x:Key="m_studentStartPersonalRoom">Комната проживания</v:String>
+    <v:String x:Key="m_studentStartPersonalStatus">Статус</v:String>
+    <v:String x:Key="m_studentStartPersonalHeader">Мои данные</v:String>
+    <v:String x:Key="m_studentStartPersonalStatusUnlocked">Без ограничений</v:String>
+    <v:String x:Key="m_studentStartPersonalStatusBlocked">Заблокирован</v:String>
+    <v:String x:Key="m_attendantStartPersonalBuilding">Зона ответственности</v:String>
+
+    <v:String x:Key="m_error">Ошибка!</v:String>
+    <v:String x:Key="m_success">Успех!</v:String>
+    <v:String x:Key="m_errorAccessDB">Не удалось подключиться к системе!
+    Проверьте подключение к интернету</v:String>
+    <v:String x:Key="m_errorAuthorDB">Не удалось подключиться к системе!
+Проверьте правильность логина и пароля</v:String>
+    <v:String x:Key="m_errorNoLogin">В системе нет пользователя с такой ролью и таким логином!
+    Проверьте правильность логина.
+    Если вы ещё не зарегистрированы в системе, обратитесь к дежурному общежития для регистрации</v:String>
+    <v:String x:Key="m_errorBlockedResident">Вы были отключены от системы записи по причинам, указанным ниже
+    Для обжалования обратитесь к дежурному в своему общежитию</v:String>
+    <v:String x:Key="m_successBooking">Запись успешно проведена. Номер вашего талона:</v:String>
+    <v:String x:Key="m_unsuccessBooking">К сожалению, кто то успел записаться раньше вас на это время. Расписание обновлено</v:String>
+    <v:String x:Key="m_errorResBookNeedMore">Для бронирования выберите все параметры (прачеченую, дату, время и продолжительность)!</v:String>
+    <v:String x:Key="m_errorRedactNoBookings">Ни одной записи данного пользователя не обнаружено. Чтобы отредактировать или отменить запись, сначала сделайте запись</v:String>
+    <v:String x:Key="m_errorNoBooking">К сожалению, данного талона больше не существует. Данные обновлены</v:String>
+    <v:String x:Key="m_doYouWantDeleteBooking">Вы точно хотите удалить данную запись?</v:String>
+    <v:String x:Key="m_confirmatioRequired">Необходимо подтверждение</v:String>
+    <v:String x:Key="m_exitConfirmation">Вы уверены, что хотите выйти?</v:String>
+
+    <v:String x:Key="m_authWindowLogin">Введите свой логин:</v:String>
+    <v:String x:Key="m_authWindowPassword">Введите пароль:</v:String>
+    <v:String x:Key="m_authWindowCancel">Отмена</v:String>
+    <v:String x:Key="m_authWindowAuthorize">Войти в систему</v:String>
+    <v:String x:Key="m_authSecurityLogin">Выберите корпус:</v:String>
+
+    <v:String x:Key="m_studentBookLaundry">Выберите прачечную:</v:String>
+    <v:String x:Key="m_studentBookDate">Выберите дату:</v:String>
+    <v:String x:Key="m_studentBookTime">Выберите время:</v:String>
+    <v:String x:Key="m_studentBookCont">Выберите продолжительность:</v:String>
+    <v:String x:Key="m_studentBookTableHeader">Текущее расписание:</v:String>
+    <v:String x:Key="m_studentBookTableWarn">Чтобы увидеть расписание, сначала выберите прачечную и дату</v:String>
+    <v:String x:Key="m_studentBookBook">Забронировать!</v:String>
+    <v:String x:Key="m_studentBookTableTip">Красным цветом обозначаются недоступные для записи ячейки
+    Зелёным цветом обозначаются доступные
+    Жёлтым цветом обозначаются выделенные ячейки
+    Помните, что минимальным временем для записи являются 30 минут</v:String>
+    <v:String x:Key="m_unsuccessBookingAlreadyExists">У вас уже есть запись на этот день! Согласно правилам, проживающий может записаться только один раз в день</v:String>
+
+    <v:String x:Key="m_selectBook">Выберите запись:</v:String>
+    <v:String x:Key="m_laundry">Прачечная:</v:String>
+    <v:String x:Key="m_date">Дата:</v:String>
+    <v:String x:Key="m_deleteBooking">Удалить запись</v:String>
+    <v:String x:Key="m_redactBooking">Изменить запись</v:String>
+    <v:String x:Key="m_unsuccessRedactBookingTooLate">Невозможно изменить время записи, так как время записи талона уже наступило или прошло</v:String>
+    <v:String x:Key="m_unsuccessDeleteBookingTooLate">Невозможно удалить запись, так как время записи талона уже наступило или прошло</v:String>
+
+    <v:String x:Key="m_securityResident">Проживающий</v:String>
+    <v:String x:Key="m_securityBooking">Номер талона</v:String>
+    <v:String x:Key="m_securityLaundry">Прачечная</v:String>
+    <v:String x:Key="m_securityActualTableName">Находящиеся в прачечных</v:String>
+    <v:String x:Key="m_securityPreparedTableName">Готовящиеся к стирке</v:String>
+    <v:String x:Key="m_securityTip">Чтобы увидеть более подробную информацию по проживающему, щёлкните по строке с его талоном</v:String>
+    <v:String x:Key="m_securityActualTableButton">Освободить праченую</v:String>
+    <v:String x:Key="m_securityPreparedTableButton">Запустить в прачечную</v:String>
+    <v:String x:Key="m_securityUpdateButton">Обновить список готовящихся</v:String>
+    <v:String x:Key="m_securityErrorNoPrepared">Такого талона нет в списке готовящихся. Возможно, его время прошло. 
+        Список готовящихся талонов обновлён </v:String>
+    <v:String x:Key="m_securityErrorLaundryOccupied">Данная прачечная ещё занята!
+    Если данная прачечная на самом деле сейчас свободна, удалите талон, прикреплённый к этой прачечной из левой таблицы. </v:String>
+    <v:String x:Key="m_securityMoveSuccessful">Талон успешно использован. Списки талонов обновлены.
+    Не забудьте удалить талон после сдачи ключей. </v:String>
+    <v:String x:Key="m_securityFreeLaundryButton">Запустить в прачечную</v:String>
+    <v:String x:Key="m_securityErrorNoBooking">Талона в данную прачечную нет в списке готовящихся. Возможно, его время прошло. 
+    Список готовящихся талонов обновлён</v:String>
+    <v:String x:Key="m_securityFreeLaundriesLabel">Свободные на данный момент прачечные:</v:String>
+
+    <v:String x:Key="m_AttendantResidentsButton">Блокировка / разблокировка проживающих</v:String>
+    <v:String x:Key="m_AttendantLaundriesButton">Обновление статуса работы прачечных</v:String>
+    <v:String x:Key="m_AttendantRequestsButton">Запросы</v:String>
+    <v:String x:Key="m_AttendantPersonalDataLabel">Персональная информация дежурного</v:String>
+
+    <v:String x:Key="m_AttendantRequestsSelectorLabel">Сохранённые заявки</v:String>
+    <v:String x:Key="m_AttendantRequestsTextLabel">Текст заявки:</v:String>
+    <v:String x:Key="m_RequestStatusLabel">Статус заявки:</v:String>
+    <v:String x:Key="m_AddNewRequestButton">Добавить новую заявку:</v:String>
+    <v:String x:Key="m_SaveRequestButton">Сохранить заявку</v:String>
+    <v:String x:Key="m_DeleteRequestButton">Удалить заявку</v:String>
+    <v:String x:Key="m_AttendantResidentsTip">Чтобы отфильтровать содержимое таблицы (например найти людей с определённым именем или комнатой), щёлкните левой кнопкой мыши на стрелочку справа от условия, которое вы хотите поменять и выберите нужные вам значения</v:String>
+    <v:String x:Key="m_AttendantResidentsTableLabel">Проживающие</v:String>
+
+</ResourceDictionary>

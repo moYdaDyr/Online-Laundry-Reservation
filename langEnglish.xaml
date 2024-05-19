@@ -1,0 +1,258 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+    <v:String x:Key="m_mainMenuResident">Log in as a resident</v:String>
+    <v:String x:Key= "m_Title" >Laundry recording system</v:String>
+    <v:String x:Key="m_mainMenuAttendant">Log in as a person on duty</v:String>
+    <v:String x:Key="m_mainMenuSecurity">Log in as a security guard</v:String>
+    <v:String x:Key="m_mainMenuAdministrator">Log in as an administrator</v:String>
+    <v:String x:Key="m_mainMenuChangeLanguage">Change language to English</v:String>
+    <v:String x:Key="m_mainMenuQuitButton">Exit</v:String>
+    <v:String x:Key="m_mainMenuGoBackButton">Back</v:String>
+    <v:String x:Key= "m_studentStartGoBook" >Sign up for laundry</v:String>
+    <v:String x:Key="m_studentStartGoDeleteAndRedact">My records</v:String>
+    <v:String x:Key="m_studentStartPersonalName">Имя</v:String>
+    <v:String x:Key= "m_studentStartPersonalSurname" >Last Name</v:String>
+    <v:String x:Key="m_studentStartPersonalPatronymic">Middle name</v:String>
+    <v:String x:Key="m_studentStartPersonalBuilding">Dorm</v:String>
+    <v:String x:Key="m_studentStartPersonalStudentCard">Student ID</v:String>
+    <v:String x:Key="m_studentStartPersonalRoom">Living room</v:String>
+    <v:String x:Key= "m_studentStartPersonalStatus" >Status</v:String>
+    <v:String x:Key="m_studentStartPersonalHeader">My data</v:String>
+    <v:String x:Key= "m_studentStartPersonalStatusUnlocked" >Unlimited</v:String>
+    <v:String x:Key= "m_studentStartPersonalStatusBlocked" >Blocked</v:String>
+    <v:String x:Key= "m_attendantStartPersonalBuilding" >Area of responsibility</v:String>
+    <v:String x:Key="m_attendantBlockingTemplate">The resident was blocked by the person on duty {0} {1} {2} for the reason " {3}". Date: {4}</v:String>
+    <v:String x:Key="m_timeViolationTemplate">A resident of {0} {1} {2} violated the time limit by handing over the keys {3} hours {4} minutes later than expected. Violation noted</v:String>
+    <v:String x:Key="m_AttendantReportOnCancel">Are you sure you want to close the window without saving the report?
+ To exit without saving the report, click OK
+ To return to the report, click Cancel</v:String>
+
+    <v:String x:Key= "m_error" >Error!</v:String>
+    <v:String x:Key="m_success">Success!</v:String>
+    <v:String x:Key= "m_needChoose" >Selection required</v:String>
+    <v:String x:Key="m_warning">Warning!</v:String>
+    <v:String x:Key= "m_confirmatioRequired" >Confirmation required</v:String>
+    
+    <v:String x:Key="m_errorAccessDB">Couldn't connect to the system!
+ Check your internet connection</v:String>
+    <v:String x:Key="m_errorAuthorDB">Couldn't connect to the system!
+Check that your username and password are correct
+ If you are not already registered in the system, please contact the hostel manager on duty to register</v:String>
+    <v:String x:Key="m_errorBlockedResident">You were disconnected from the recording system for the following reasons:
+ To appeal, contact the person on duty at your dorm</v:String>
+    <v:String x:Key= "m_successBooking" >The recording was completed successfully. Your ticket number:</v:String>
+    <v:String x:Key="m_unsuccessBooking">Unfortunately, someone managed to sign up before you at this time. Schedule updated</v:String>
+    <v:String x:Key="m_errorResBookNeedMore">To make a reservation, select all the parameters (laundry, date, time and duration)!</v:String>
+    <v:String x:Key="m_errorRedactNoBookings">You don't have a single entry yet! To edit or cancel an entry, first make an entry</v:String>
+    <v:String x:Key="m_errorNoBooking">Unfortunately, this ticket no longer exists. Data updated</v:String>
+    <v:String x:Key="m_doYouWantDeleteBooking">Are you sure you want to delete this entry?</v:String>
+    
+    <v:String x:Key="m_exitConfirmation">Are you sure you want to get out?</v:String>
+    <v:String x:Key= "m_successRedactBooking" >Entry modified successfully!</v:String>
+    <v:String x:Key= "m_attendantUnblockingErrorAlready" >This user cannot be unblocked because they no longer have locks!</v:String>
+    <v:String x:Key= "m_AttendantReportError" >Error when compiling the report!
+Error data:</v:String>
+    <v:String x:Key= "m_AttendantReportSuccess" >Report created and saved successfully!</v:String>
+
+    <v:String x:Key="m_authWindowLogin">Enter your username:</v:String>
+    <v:String x:Key="m_authWindowPassword">Enter your password:</v:String>
+    <v:String x:Key="m_authWindowCancel">Cancel</v:String>
+    <v:String x:Key="m_authWindowAuthorize">Log in</v:String>
+    <v:String x:Key="m_authSecurityLogin">Select the case:</v:String>
+
+    <v:String x:Key="m_studentBookLaundry">Select a laundry service:</v:String>
+    <v:String x:Key="m_studentBookDate">Select a date:</v:String>
+    <v:String x:Key="m_studentBookTime">Choose a time:</v:String>
+    <v:String x:Key="m_studentBookCont">Select the duration:</v:String>
+    <v:String x:Key="m_studentBookTableHeader">Current schedule:</v:String>
+    <v:String x:Key= "m_studentBookTableWarn" >To see the schedule, first select the laundry service and date</v:String>
+    <v:String x:Key= "m_studentBookBook" >Book!</v:String>
+    <v:String x:Key="m_studentBookTableTip">Red indicates cells that are not writable
+ Green indicates available options
+ Yellow color indicates the selected cells
+ Please note that the minimum recording time is 30 minutes</v:String>
+    <v:String x:Key="m_unsuccessBookingAlreadyExists">You already have an appointment for this day! According to the rules, a resident can only register once a day</v:String>
+
+    <v:String x:Key="m_selectBook">Select the entry:</v:String>
+    <v:String x:Key="m_laundry">Laundry service:</v:String>
+    <v:String x:Key= "m_date" >Date:</v:String>
+    <v:String x:Key="m_deleteBooking">Delete an entry</v:String>
+    <v:String x:Key="m_redactBooking">Edit the</v:String>
+    <v:String x:Key= "m_unsuccessRedactBookingTooLate" >It is not possible to change the recording time, because the ticket recording time has already arrived or passed</v:String>
+    <v:String x:Key= "m_unsuccessDeleteBookingTooLate" >The entry cannot be deleted because the ticket entry time has already arrived or passed</v:String>
+
+    <v:String x:Key="m_securityResident">Resident</v:String>
+    <v:String x:Key="m_securityBooking">Ticket number</v:String>
+    <v:String x:Key="m_securityLaundry">Laundry service</v:String>
+    <v:String x:Key="m_securityActualTableName">Located in laundromats</v:String>
+    <v:String x:Key="m_securityPreparedTableName">Ready to wash</v:String>
+    <v:String x:Key= "m_securityTip" >To see more detailed information about the resident, click on the line with their ticket</v:String>
+    <v:String x:Key="m_securityActualTableButton">Release the laundry</v:String>
+    <v:String x:Key= "m_securityPreparedTableButton" >Run in Laundry</v:String>
+    <v:String x:Key="m_securityUpdateButton">Update the upcoming list</v:String>
+    <v:String x:Key="m_securityErrorNoPrepared">Such a ticket is not included in the list of students. Perhaps his time has passed. 
+ The list of upcoming coupons has been updated </v:String>
+    <v:String x:Key= "m_securityErrorLaundryOccupied" >This laundry is still occupied!
+ If this laundry is actually currently available, remove the ticket attached to this laundry from the left table. </v:String>
+    <v:String x:Key= "m_securityMoveSuccessful" >The ticket was used successfully. The ticket lists have been updated.
+ Don't forget to delete the ticket after handing in your keys. </v:String>
+    <v:String x:Key= "m_securityFreeLaundryButton" >Run in Laundry</v:String>
+    <v:String x:Key= "m_securityErrorNoBooking" >The ticket for this laundry is not in the list of those who are preparing. Perhaps his time has passed. 
+ The list of upcoming coupons has been updated</v:String>
+    <v:String x:Key="m_securityFreeLaundriesLabel">Currently available laundries:</v:String>
+
+    <v:String x:Key="m_residentBlockingMessageStart">You have the following active locks:</v:String>
+    <v:String x:Key= "m_residentBlockingMessage" >Blocked by the standby {0} {1} {2} for the reason " {3}". Date: {4}</v:String>
+    <v:String x:Key= "m_residentBlockingMessageEnd" >To remove the lock, contact your dorm attendant</v:String>
+
+    <v:String x:Key= "m_AttendantReportBlockingNone" >This resident has no active locks and can use laundry facilities without restrictions.</v:String>
+    <v:String x:Key= "m_AttendantReportBlockingStart" >This resident has the following active locks: </v:String>
+    <v:String x:Key= "m_AttendantReportBlocking" >Blocked by duty {0} {1} {2} due to "{3}". Date: {4}.</v:String>
+
+    <v:String x:Key= "m_AttendantReportViolationNone" >This resident has not violated the time frame of their records in the last 7 days.</v:String>
+    <v:String x:Key= "m_AttendantReportViolationStart" >This resident has the following violation episodes in the last seven days:</v:String>
+    <v:String x:Key="m_AttendantReportViolation">Record violation. Date: {0}. Releasing an entry for {1} later than the one specified in the ticket.</v:String>
+
+    <v:String x:Key= "m_AttendantReportHeader" >Resident Report</v:String>
+    <v:String x:Key= "m_AttendantReportTableHeader" >User data table</v:String>
+    <v:String x:Key= "m_AttendantReportDate" >Report compiled:</v:String>
+    <v:String x:Key="m_AttendantDefaultFileNameStart">Otchet_</v:String>
+
+    <v:String x:Key= "m_AttendantResidentsButton" >Lock / Unlock the device</v:String>
+    <v:String x:Key="m_AttendantLaundriesButton">Updating the status of laundry services</v:String>
+    <v:String x:Key= "m_AttendantRequestsButton" >Requests</v:String>
+    <v:String x:Key="m_AttendantPersonalDataLabel">Personal information of the person on duty</v:String>
+
+    <v:String x:Key= "m_AttendantResidentsBuildingHeader" >Buildings</v:String>
+    <v:String x:Key="m_AttendantResidentsNameHeader">Names</v:String>
+    <v:String x:Key= "m_AttendantResidentsSurnameHeader" >Surnames</v:String>
+    <v:String x:Key="m_AttendantResidentsPatronymicHeader">Middle names</v:String>
+    <v:String x:Key="m_AttendantResidentsStudentCardHeader">Student ID cards</v:String>
+    <v:String x:Key="m_AttendantResidentsRoomHeader">Rooms</v:String>
+    <v:String x:Key= "m_AttendantResidentsStatusHeader" >Lock statuses</v:String>
+
+    <v:String x:Key="m_attendantResidentsTableReportButton">Отчёт</v:String>
+    <v:String x:Key= "m_attendantResidentsTableUnblockButton" >Unlock</v:String>
+    <v:String x:Key= "m_attendantResidentsTableBlockButton" >Block</v:String>
+    <v:String x:Key="m_AttendantRequestsSelectorLabel">Saved requests</v:String>
+    <v:String x:Key="m_AttendantRequestsTextLabel">Application text:</v:String>
+    <v:String x:Key="m_AddNewRequestButton">Add a new request:</v:String>
+    <v:String x:Key="m_SaveRequestButton">Save request</v:String>
+    <v:String x:Key="m_UpdateRequestButton">Update the request</v:String>
+    <v:String x:Key="m_CancelRequestButton">Cancel</v:String>
+    <v:String x:Key= "m_DeleteRequestButton" >Delete request</v:String>
+    <v:String x:Key="m_AttendantResidentsTip">Select the resident you want to block or unblock in the table below and click on the "Block" or "Unblock" button in the corresponding row, respectively
+ To get a report about a user, click on the "Report" button in the corresponding line.
+ To filter it, click on the circle with the arrow and mark the values using the checkboxes. Residents whose first name, last name, or other parameter marked with a check mark will appear in the table, while the rest will disappear</v:String>
+    <v:String x:Key= "m_AttendantResidentsTableLabel" >Table with residents:</v:String>
+    <v:String x:Key="m_laundriesStatusClosed">Закрыта</v:String>
+    <v:String x:Key="m_laundriesStatusOpen">Open</v:String>
+    <v:String x:Key="m_attendantLaundriesStatusQuestion">Choose what work status you want to set for the laundry service.
+ Click " Yes " if you want to mark the laundry service as open.
+ Click " No " if you want to mark the laundry room as temporarily closed.
+ Click Cancel to close the window and do not change the work status.</v:String>
+    <v:String x:Key="m_AttendantRequestsOnCloseExist">Are you sure you want to exit without saving? 
+ To save your changes to the application before exiting, click "Yes"
+ To exit without saving, click "No"
+ To return to the request, click Cancel</v:String>
+    <v:String x:Key="m_AttendantRequestsOnChange">If you switch now, your application changes will be lost! 
+ To save changes to the request before switching, click "Yes"
+ To go without saving, click "No"
+ To return to the request, click Cancel</v:String>
+    <v:String x:Key= "m_AttendantRequestsOnCloseNew" >If you close the window now, the request will not be sent! 
+ To save changes to the request before switching, click "Yes"
+ To go without saving, click "No"
+ To return to the request, click Cancel</v:String>
+    <v:String x:Key="m_AttendantRequestDelete">Are you sure you want to delete this request? It will be impossible to restore it!</v:String>
+    <v:String x:Key= "m_AttendantRequestSended" >Request submitted successfully! To edit or delete a request, select it from the drop-down list.</v:String>
+    <v:String x:Key= "m_AttendantRequestReSended" >The modified request was sent successfully!</v:String>
+    <v:String x:Key= "m_AttendantRequestDeleted" >The request was successfully withdrawn!</v:String>
+
+    <v:String x:Key="m_AdministratorTableDelete">Are you sure you want to delete this data? This action is irreversible.</v:String>
+
+    <v:String x:Key="m_AdministratorRequestSelectorLabel">Select a request:</v:String>
+    <v:String x:Key="m_AdministratorRequestTextLebel">Application text:</v:String>
+    <v:String x:Key= "m_AdministratorFiltersLabel" >Application filters</v:String>
+    <v:String x:Key="m_AdministratorShowInProgress">Show requests in progress</v:String>
+    <v:String x:Key="m_AdministratorShowDone">Show completed requests</v:String>
+
+    <v:String x:Key="m_Cancel">Cancel</v:String>
+    <v:String x:Key="m_Quit">Exit</v:String>
+    <v:String x:Key= "m_AdministratorTakeRequestButton" >Submit a request</v:String>
+    <v:String x:Key="m_AdministratorCompleteRequestButton">Mark as ready</v:String>
+    <v:String x:Key="m_SaveData">Save data</v:String>
+    <v:String x:Key="m_AdministratorSelectAttendantBuildingLabel">Mark the duty officer's area of responsibility</v:String>
+    <v:String x:Key= "m_AdministratorRedactingTipLabel" >To filter data by values, click on the arrow in the header of the desired table column and select the desired values. A check mark indicates that this value will pass the filter. When you're done, don't forget to save the results</v:String>
+    <v:String x:Key= "m_AdministratorRedactingLabel" >Data table:</v:String>
+    <v:String x:Key="m_AdministratorAddNewDataButton">Add new data</v:String>
+
+    <v:String x:Key="m_AdministratorsResidentsButton">Residents</v:String>
+    <v:String x:Key="m_AdministratorsAttendantButton">Дежурные</v:String>
+    <v:String x:Key= "m_AdministratorsSecurityButton" >Buildings and security posts</v:String>
+    <v:String x:Key= "m_AdministratorsAdministratorsButton" >Administrators</v:String>
+    <v:String x:Key="m_AdministratorsRequestButton">Заявки</v:String>
+    <v:String x:Key="m_AdministratorPersonalDataLabel">Personal data of the administrator</v:String>
+    <v:String x:Key="m_AdministratorEnterNewPassword">Enter your new password:</v:String>
+    <v:String x:Key= "m_AdministratorChangePasswordDoneButton" >Change password</v:String>
+    <v:String x:Key="m_AdministratorAddWindowLabel">Enter the new data below:</v:String>
+    <v:String x:Key="m_AttendantBlockingReasonsBlockLabel">Select the reason for blocking below:</v:String>
+    <v:String x:Key="m_AttendantBlockingReasonsUnblockLabel">Select the lock you want to cancel below:</v:String>
+    <v:String x:Key="m_SaveChanges">Save changes</v:String>
+    <v:String x:Key="m_AttendantLaundriesTip">Select the laundry service whose work status you want to change in the table below and click on the "Change work status" button in the desired row and select the current work status.
+ To filter it, click on the circle with the arrow and mark the values using the checkboxes. Laundries whose name or other parameter is marked with a check mark will appear in the table, the rest will disappear </v:String>
+    <v:String x:Key= "m_attendantResidentsTableStatusButton" >Change work status</v:String>
+    <v:String x:Key= "AttendantLaundriesStatusHeader" >Work status</v:String>
+    <v:String x:Key= "AttendantLaundriesLimitHeader" >Write time limit</v:String>
+    <v:String x:Key="m_AttendantLaundriesNameHeader">Laundry name</v:String>
+    <v:String x:Key= "m_AttendantLaundriesTableLabel" >Laundry data table:</v:String>
+    <v:String x:Key="m_AttendantRequestSelectorLabel">Select a subject for your application:</v:String>
+    <v:String x:Key="m_AttendantRequestTextLebel">Application text:</v:String>
+    <v:String x:Key="m_AttendantRequestTextTip">Be sure to choose a topic that matches the essence of the story. If the topic is not in the list, select "No topic".
+ In the text of the application, briefly describe the problem and provide all the necessary data.
+ For example, to add a new resident, provide their full name, dorm, room, and the desired username and password.
+ If you have a student ID, enter it.</v:String>
+
+    <v:String x:Key="m_AttendantSaveRequestButton">Submit a request</v:String>
+    <v:String x:Key="m_AttendantRequestExistsSelectorLabel">Select an existing request:</v:String>
+    <v:String x:Key="m_AttendantUpdateRequestButton">Save request</v:String>
+    <v:String x:Key="m_AttendantDeleteRequestButton">Withdraw the request</v:String>
+    <v:String x:Key="m_AttendantCreateRequestButton">Create a request</v:String>
+    <v:String x:Key="m_AttendantExportToPdf">Save report to PDF</v:String>
+
+    <v:String x:Key="m_F1Tip">To access help, press F1 or the question mark in the upper-right corner</v:String>
+    
+    <v:String x:Key= "m_mainWindow" >System for writing to laundry</v:String>
+    <v:String x:Key= "m_authWindow" >Authorization window</v:String>
+    <v:String x:Key= "m_repWindow" >User Report</v:String>
+    <v:String x:Key= "m_newReqWindow" >New application</v:String>
+    <v:String x:Key= "m_blockingWindow" >Lock/Unlock</v:String>
+    <v:String x:Key= "m_attBuildingsWindow" >Area of responsibility</v:String>
+    <v:String x:Key= "m_admPasswordVindow" >Change password</v:String>
+    <v:String x:Key= "m_admAddWindow" >Adding data</v:String>
+    <v:String x:Key= "m_admReqWindow" >Applications</v:String>
+
+    <v:String x:Key="m_DayWeek1">Monday</v:String>
+    <v:String x:Key="m_DayWeek2">Tuesday</v:String>
+    <v:String x:Key="m_DayWeek3">Environment</v:String>
+    <v:String x:Key= "m_DayWeek4" >Thursday</v:String>
+    <v:String x:Key="m_DayWeek5">Friday</v:String>
+    <v:String x:Key= "m_DayWeek6" >Saturday</v:String>
+    <v:String x:Key="m_DayWeek7">Соскресенье</v:String>
+
+    <v:String x:Key="m_errorZeroLength">The parameter length cannot be equal to 0!</v:String>
+    <v:String x:Key="m_successPassword">The user's password was replaced successfully!</v:String>
+    <v:String x:Key="m_saveQuestion">Are you sure you want to get out? Entered data will not be saved!</v:String>
+
+    <v:String x:Key= "m_residentsNoSlotsDurationError" >You can't register for this time because the maximum recording time is less than 30 minutes. Please choose a different time for writing</v:String>
+
+    <v:String x:Key="m_AdministratorChangePasswordButton">Change your password</v:String>
+    <v:String x:Key= "m_AdministratorDeleteButton" >Delete user</v:String>
+    <v:String x:Key="m_AdministratorID">ID</v:String>
+    <v:String x:Key= "m_AdministratorLogin" >Login</v:String>
+    <v:String x:Key= "m_AdministratorNameRU" >Russian name</v:String>
+    <v:String x:Key="m_AdministratorNameEN">English name</v:String>
+    <v:String x:Key="m_administratorNoBuildingsError">The person on duty must have at least one building in their area of responsibility</v:String>
+        
+</ResourceDictionary>

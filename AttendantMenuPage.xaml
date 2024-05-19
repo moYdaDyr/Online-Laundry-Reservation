@@ -1,0 +1,37 @@
+﻿<Page x:Class="Kursovaya2.AttendantMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursovaya2"
+        mc:Ignorable="d"
+        Title="AttendantMenu">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Button Name ="AttendantResidentsButton" Grid.Row="0" Grid.RowSpan="2"  Grid.Column="0" Content="{DynamicResource m_AttendantResidentsButton}" Click="AttendantResidentsButton_Click" Style="{StaticResource MenuButtonsStyle}"/>
+        <Button Name ="AttendantLaundriesButton" Grid.Row="2" Grid.Column="0" Content="{DynamicResource m_AttendantLaundriesButton}" Click="AttendantLaundriesButton_Click" Style="{StaticResource MenuButtonsStyle}"/>
+        <Button Name ="AttendantRequestsButton" Grid.Row="3" Grid.RowSpan="2" Grid.Column="0" Content="{DynamicResource m_AttendantRequestsButton}" Click="AttendantRequestsButton_Click" Style="{StaticResource MenuButtonsStyle}"/>
+
+
+        <Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="3">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Height="Auto" Width="Auto">
+                <TextBlock Name ="AttendantPersonalDataLabel" Text="{DynamicResource m_AttendantPersonalDataLabel}" Style="{StaticResource CommonHeaderStyle}"/>
+                <DataGrid Name ="AttendantPersonalDataGrid" Grid.RowSpan="3" IsReadOnly="True" HeadersVisibility="None">
+
+                </DataGrid>
+            </StackPanel>
+        </Grid >
+        
+    </Grid>
+</Page>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="Kursovaya2.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursovaya2"
+        mc:Ignorable="d"
+        Title="{DynamicResource m_authWindow}" Height="Auto" Width="Auto" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.Row="0" Name = "AuthLoginLabel" Grid.ColumnSpan="2" Text="{DynamicResource m_authWindowLogin}" Style="{StaticResource CommonLabelStyle}"/>
+        <TextBox Grid.Column="0" Grid.Row="1" Name = "AuthLoginTextBox" Grid.ColumnSpan="2" MaxLength="15" TextChanged="AuthLoginTextBox_TextChanged" Style="{StaticResource CommonTextBoxStyle}"/>
+        <TextBlock Grid.Column="0" Grid.Row="0" Name = "AuthCorpusLabel" Grid.ColumnSpan="2" Visibility="Hidden" Text="{DynamicResource m_authSecurityLogin}" Style="{StaticResource CommonLabelStyle}"/>
+        
+        <ComboBox Grid.Column="0" Grid.Row="1" Name = "AuthCorpusSelector" Grid.ColumnSpan="2" SelectionChanged="AuthCorpusSelector_SelectionChanged" Style="{StaticResource CommonSelectorStyle}">
+            
+        </ComboBox>
+
+        <TextBlock Grid.Column="0" Grid.Row="2" Name = "AuthPasswordLabel" Grid.ColumnSpan="2" Text="{DynamicResource m_authWindowPassword}" Style="{StaticResource CommonLabelStyle}"/>
+        <PasswordBox Grid.Column="0" Grid.Row="3" Name = "AuthPasswordTextBox" Grid.ColumnSpan="2" MaxLength="15" PasswordChanged="AuthPasswordTextBox_PasswordChanged" Style="{StaticResource CommonPasswordBoxStyle}"/>
+
+        <Button Name ="AuthCancelButtom" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Click="AuthCancel_Click" 
+                Style="{StaticResource CommonButtonsStyle}" Content="{DynamicResource m_authWindowCancel}"/>
+        <Button Name ="AuthAuthorButtom" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Click="AuthAuthor_Click" 
+                Style="{StaticResource CommonButtonsStyle}" Content="{DynamicResource m_authWindowAuthorize}"/>
+
+    </Grid>
+</Window>

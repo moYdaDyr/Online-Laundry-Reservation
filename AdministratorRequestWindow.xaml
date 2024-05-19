@@ -1,0 +1,48 @@
+﻿<Window x:Class="Kursovaya2.AdministratorRequestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursovaya2"
+        mc:Ignorable="d"
+        Title="{DynamicResource m_admReqWindow}" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="AdministratorRequestSelectorLabel" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource CommonLabelStyle}" Text="{DynamicResource m_AdministratorRequestSelectorLabel}"/>
+        <TextBlock Name="AdministratorRequestTextLebel" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource CommonLabelStyle}" Text="{DynamicResource m_AdministratorRequestTextLebel}"/>
+
+        <GroupBox Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
+            <GroupBox.Header>
+                <TextBlock Name="AdministratorFiltersLabel" Grid.Row="0" Grid.Column="2" Style="{StaticResource CommonTipStyle}" Text="{DynamicResource m_AdministratorFiltersLabel}"/>
+            </GroupBox.Header>
+
+            <StackPanel>
+                <CheckBox Name="AdministratorShowInProgress" Grid.Row="1" Grid.Column="2" Style="{StaticResource CommonCheckBoxStyle}" Content="{DynamicResource m_AdministratorShowInProgress}"/>
+                <CheckBox Name="AdministratorShowDone" Grid.Row="2" Grid.Column="2" Style="{StaticResource CommonCheckBoxStyle}" Content="{DynamicResource m_AdministratorShowDone}"/>
+            </StackPanel>
+
+        </GroupBox>
+
+        <Button Name="AdministratorQuitRequestButton" Grid.Row="4" Grid.Column="0" Click="AdministratorQuitRequestButton_Click" Style="{StaticResource CommonButtonsStyle}" Content="{DynamicResource m_Quit}"/>
+        <Button Name="AdministratorTakeRequestButton" Grid.Row="4" Grid.Column="1" Click="AdministratorTakeRequestButton_Click" Style="{StaticResource CommonButtonsStyle}" Content="{DynamicResource m_AdministratorTakeRequestButton}"/>
+        <Button Name="AdministratorCompleteRequestButton" Grid.Row="4" Grid.Column="2" Click="AdministratorCompleteRequestButton_Click" Style="{StaticResource CommonButtonsStyle}" Content="{DynamicResource m_AdministratorCompleteRequestButton}"/>
+
+        <ComboBox Name="AdministratorRequestsSelector" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" SelectionChanged="AdministratorRequestsSelector_SelectionChanged" Style="{StaticResource CommonSelectorStyle}"/>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+            <TextBox Name ="AdministratorRequestText" IsReadOnly="True"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
